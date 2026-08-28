@@ -1,0 +1,9 @@
+.vscode
+.idea
+.temporary_cache
+.DS_Store
+.codegpt
+
+dist
+node_modules
+gulp/version.json
