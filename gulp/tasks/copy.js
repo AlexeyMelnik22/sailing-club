@@ -1,0 +1,14 @@
+import gulp from 'gulp';
+
+import { filePaths } from '../config/paths.js';
+import { logger } from '../config/logger.js';
+
+export const copy = () => {
+	return gulp
+		.src(filePaths.src.static, {
+			base: filePaths.srcFolder,
+			encoding: false,
+		})
+		.pipe(logger.handleError('COPY'))
+		.pipe(gulp.dest(filePaths.buildFolder));
+};

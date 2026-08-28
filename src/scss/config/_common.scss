@@ -1,0 +1,8 @@
+@use 'helpers' as *;
+
+.load-more {
+  padding-block: rem(41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

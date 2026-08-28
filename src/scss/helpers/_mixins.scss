@@ -1,0 +1,131 @@
+@use "sass:math" as math;
+@use 'functions' as *;
+
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: fluid($max, $min);
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else  {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+
+// gradient for text
+@mixin text-gradient($gradient) {
+	background: $gradient;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+// :not (last-child)
+@mixin not-last() {
+	&:not(:last-child) {
+		@content;
+	}
+}
+
+// :not (first-child)
+@mixin not-first() {
+	&:not(:first-child) {
+		@content;
+	}
+}
+
+// обрезает текст до определенного кол-ва строк, остаток заменяет на 3 точки (...)
+@mixin line-clamp($value) {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: block-axis;
+	-webkit-line-clamp: $value;
+}
+
+// styled placeholder for TextArea
+@mixin styled-placeholder($color: inherit, $fontSize: inherit, $lineHeight: normal) {
+	&::placeholder {
+		line-height: $lineHeight;
+		font-size: $fontSize;
+		color: $color;
+	}
+}
+
+// плавное убирание placeholder
+@mixin hide-placeholder($time: 300, $effect: ease) {
+	&::placeholder {
+		transition: opacity #{$time} + ms $effect;
+	}
+
+	&:focus {
+		&::placeholder {
+			opacity: 0;
+		}
+	}
+}
+
+// after-before
+@mixin pseudo-cell($type, $pos: absolute) {
+	&::#{$type} {
+		content: "";
+		position: $pos;
+		@content;
+	}
+}
+
+//link color
+@mixin link-color($color) {
+	color: $color;
+	border-bottom-color: transparent;
+	&:hover {
+		border-bottom-color: $color;
+	}
+	&.link-hover {
+		color: $color;
+		border-bottom-color: $color;
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+}
+
+//font
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$font_name}/#{$file_name}.woff") format("woff"), url("../fonts/#{$font_name}/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}

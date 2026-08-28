@@ -1,0 +1,33 @@
+@use "helpers" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: rem(40);
+    .header__content {
+      .burger__button {
+        padding: rem(10);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(5);
+        background-color: var(--color-dark);
+        border-radius: rem(5);
+        .burger__line {
+          width: rem(20);
+          height: rem(2);
+          border-radius: rem(50);
+          background-color: var(--color-light);
+        }
+      }
+    }
+    .header__logo {
+      .logo {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

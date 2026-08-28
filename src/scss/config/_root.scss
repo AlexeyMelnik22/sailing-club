@@ -1,0 +1,41 @@
+@use 'helpers' as *;
+
+:root {
+	--color-dark: #000000;
+	--color-light: #ffffff;
+	--color-gray: #C8C8C8;
+	--color-gray-1: #929292;
+	--color-gray-2: #5F5F5F;
+	--color-gray-3: #636264;
+
+	--color-primary: var(--color-dark);
+
+	--color-blue: #3D8EDA;
+
+
+	--color-border: #DEDEDE;
+
+	--font-family-base: "Poppins", sans-serif;
+	--font-family-secondary: "Montserrat", sans-serif;
+
+	--container-width: #{rem(1697)};
+	--container-padding-x: #{rem(16)};
+	//@include mobile {
+	//	--container-width: #{rem(400)};
+	//}
+
+	--transition-duration: .2s;
+
+	//header
+
+
+	//buttons
+
+	//primary
+	--btn-primary-color: var(--color-gray-1);
+	--btn-primary-bg: transparent;
+	--btn-primary-border: var(--color-gray-1);
+	--btn-primary-border-active: var(--color-dark);
+	--btn-primary-color-active: var(--color-dark);
+
+}
