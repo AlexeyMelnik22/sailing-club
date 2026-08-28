@@ -9,52 +9,73 @@ BaseHelpers.addTouchClass();
 BaseHelpers.addLoadedClass();
 
 
-const menuToggle = document.querySelector('.menu-toggle');
+const menuToggles = document.querySelectorAll('.menu-toggle');
 const sideMenu = document.querySelector('.side-menu');
 const backdrop = document.querySelector('.menu-backdrop');
 const closeButtons = document.querySelectorAll('[data-menu-close]');
-const menuLinks = sideMenu.querySelectorAll('a');
 
-function openMenu() {
-    sideMenu.classList.add('is-open');
-    backdrop.classList.add('is-visible');
-    document.body.classList.add('menu-is-open');
+if (menuToggles.length && sideMenu && backdrop) {
+    const menuLinks = sideMenu.querySelectorAll('a');
 
-    menuToggle.setAttribute('aria-expanded', 'true');
-    sideMenu.setAttribute('aria-hidden', 'false');
-}
+    function setMenuState(isOpen, shouldFocusToggle = false) {
+        sideMenu.classList.toggle('is-open', isOpen);
+        backdrop.classList.toggle('is-visible', isOpen);
+        document.body.classList.toggle('menu-is-open', isOpen);
 
-function closeMenu() {
-    sideMenu.classList.remove('is-open');
-    backdrop.classList.remove('is-visible');
-    document.body.classList.remove('menu-is-open');
+        sideMenu.setAttribute('aria-hidden', String(!isOpen));
 
-    menuToggle.setAttribute('aria-expanded', 'false');
-    sideMenu.setAttribute('aria-hidden', 'true');
+        menuToggles.forEach((toggle) => {
+            toggle.setAttribute('aria-expanded', String(isOpen));
+        });
 
-    menuToggle.focus();
-}
+        if (!isOpen && shouldFocusToggle) {
+            const activeToggle = document.activeElement;
 
-menuToggle.addEventListener('click', () => {
-    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
-
-    if (isOpen) {
-        closeMenu();
-    } else {
-        openMenu();
+            if (!activeToggle?.classList.contains('menu-toggle')) {
+                menuToggles[0].focus();
+            }
+        }
     }
-});
 
-closeButtons.forEach((button) => {
-    button.addEventListener('click', closeMenu);
-});
-
-menuLinks.forEach((link) => {
-    link.addEventListener('click', closeMenu);
-});
-
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-        closeMenu();
+    function openMenu() {
+        setMenuState(true);
     }
-});
+
+    function closeMenu(shouldFocusToggle = false) {
+        setMenuState(false, shouldFocusToggle);
+    }
+
+    menuToggles.forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+            const isOpen = sideMenu.classList.contains('is-open');
+
+            if (isOpen) {
+                closeMenu(true);
+            } else {
+                openMenu();
+            }
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            closeMenu(true);
+        });
+    });
+
+    backdrop.addEventListener('click', () => {
+        closeMenu(true);
+    });
+
+    menuLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            closeMenu(false);
+        });
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && sideMenu.classList.contains('is-open')) {
+            closeMenu(true);
+        }
+    });
+}
