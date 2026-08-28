@@ -19,13 +19,10 @@ They might well be outsourced to an external stylesheet of course.
 -->
 
 <style type="text/css">
-	.svg-bx_bx-calendar-dims { width: 24px; height: 24px; }
-	.svg-bx_bx-clear-dims { width: 24px; height: 24px; }
-	.svg-comment-fill-dims { width: 18px; height: 18px; }
-	.svg-filter-grid-dims { width: 22px; height: 22px; }
-	.svg-filter-row-dims { width: 24px; height: 22px; }
-	.svg-heart-fill-dims { width: 18px; height: 18px; }
-	.svg-logo-dims { width: 138px; height: 138px; }
+	.svg-close-dims { width: 800px; height: 800px; }
+	.svg-facebook-dims { width: 28px; height: 28px; }
+	.svg-instagram-dims { width: 28px; height: 28px; }
+	.svg-twitter-x-dims { width: 28px; height: 28px; }
 </style>
 <!--
 ====================================================================================================
@@ -48,13 +45,10 @@ for further details on how to create this embeddable sprite variant.
 -->
 
 <svg width="0" height="0" style="position:absolute">
-		<symbol fill="none" viewBox="0 0 24 24" id="bx_bx-calendar" xmlns="http://www.w3.org/2000/svg"><path d="M7 11h2v2H7v-2zm0 4h2v2H7v-2zm4-4h2v2h-2v-2zm0 4h2v2h-2v-2zm4-4h2v2h-2v-2zm0 4h2v2h-2v-2z" fill="#5F5F5F"/><path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z" fill="#5F5F5F"/></symbol>
-		<symbol fill="none" viewBox="0 0 24 24" id="bx_bx-clear" xmlns="http://www.w3.org/2000/svg"><path d="M17.657 16.243L13.414 12l4.243-4.243-1.414-1.414L12 10.586 7.757 6.343 6.343 7.757 10.586 12l-4.243 4.243 1.414 1.414L12 13.414l4.243 4.243 1.414-1.414z" fill="#5F5F5F"/></symbol>
-		<symbol fill="none" viewBox="0 0 18 18" id="comment-fill" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 3c0-.825-.675-1.5-1.5-1.5H3c-.825 0-1.5.675-1.5 1.5v9c0 .825.675 1.5 1.5 1.5h10.5l3 3V3z" fill="#000"/></symbol>
-		<symbol fill="none" viewBox="0 0 22 22" id="filter-grid" xmlns="http://www.w3.org/2000/svg"><path fill="#C8C8C8" d="M0 0h6v6H0zM8 0h6v6H8zM16 0h6v6h-6zM0 8h6v6H0zM0 16h6v6H0zM8 8h6v6H8zM8 16h6v6H8zM16 8h6v6h-6zM16 16h6v6h-6z"/></symbol>
-		<symbol fill="none" viewBox="0 0 24 22" id="filter-row" xmlns="http://www.w3.org/2000/svg"><path fill="#3D8EDA" d="M0 0h6v6H0zM0 8h6v6H0zM0 16h6v6H0zM9 10h15v2H9zM9 18h15v2H9zM9 2h15v2H9z"/></symbol>
-		<symbol fill="none" viewBox="0 0 18 18" id="heart-fill" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 6.3a4.05 4.05 0 014.125-4.05A4.493 4.493 0 019 3.75a4.493 4.493 0 013.375-1.5A4.05 4.05 0 0116.5 6.3c0 4.017-4.784 7.05-7.5 9.45-2.71-2.42-7.5-5.43-7.5-9.45z" fill="#000"/></symbol>
-		<symbol fill="none" viewBox="0 0 138 138" id="logo" xmlns="http://www.w3.org/2000/svg"><path d="M56.5 7.217a25 25 0 0125 0l34.756 20.066a25 25 0 0112.5 21.65v40.133a25 25 0 01-12.5 21.651L81.5 130.783a25 25 0 01-25 0l-34.756-20.066a25 25 0 01-12.5-21.65V48.933a25 25 0 0112.5-21.65L56.5 7.216z" fill="#fff"/><path d="M128.756 88.532v.534a25 25 0 01-12.5 21.651L81.5 130.783a25 25 0 01-25 0l-34.756-20.066a25.18 25.18 0 01-1.668-1.053L17.5 101 26 68l7.5-12 22 22.5 27-40 46.256 50.032z" fill="#066C61"/><path d="M18.173 108.216a25.007 25.007 0 01-7.634-11.207L10.5 96.5c1.167-13 6.2-39.7 17-42.5 14-3.63 21 42.5 21 42.5s6.22-64.244 25.5-63c15.5 1 21.5 33 17.5 91.5l-.02.022-9.98 5.761a24.983 24.983 0 01-10.908 3.299c6.974-12.139 6.314-60.063 2.908-77.582-1.992 5.516-3.561 14-5.254 23.157-3.833 20.725-8.302 44.889-19.746 45.843a4.793 4.793 0 01-1.26-.063l-3.786-2.186C36.248 116.272 30.68 94.856 28.5 83c-.397 10.72-4.439 22.982-6.455 27.891l-.3-.174c-.262-.151-.52-.306-.773-.465l-2.8-2.036z" fill="#B3DBC9"/></symbol>
+		<symbol viewBox="0 0 24 24" id="close" xmlns="http://www.w3.org/2000/svg"><path d="M20.746 3.329a1 1 0 00-1.415 0l-7.294 7.294-7.294-7.294a1 1 0 10-1.414 1.414l7.294 7.294-7.294 7.294a1 1 0 001.414 1.415l7.294-7.295 7.294 7.295a1 1 0 001.415-1.415l-7.295-7.294 7.295-7.294a1 1 0 000-1.414z"/></symbol>
+		<symbol fill="none" viewBox="0 0 28 28" id="facebook" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="14" fill="#fff"/><circle cx="14" cy="14" r="13.5" stroke="#000" stroke-opacity=".2"/><path d="M12.709 20.304V14.75h-1.87v-2.164h1.87V10.99c0-1.852 1.131-2.861 2.783-2.861.792 0 1.472.059 1.67.085v1.936h-1.146c-.898 0-1.072.428-1.072 1.054v1.382h2.143l-.28 2.164h-1.863v5.554h-2.235z" fill="#000"/><path d="M15.492 8.629c.455 0 .87.02 1.17.042v.98h-.645c-.516 0-.963.121-1.256.47-.277.328-.318.748-.318 1.083v1.882h2.076l-.15 1.164h-1.926v5.554H13.21V14.25h-1.87v-1.164h1.87V10.99c0-.822.248-1.399.623-1.77.376-.371.936-.591 1.66-.591z" stroke="#000" stroke-opacity=".2"/></symbol>
+		<symbol fill="none" viewBox="0 0 28 28" id="instagram" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="14" fill="#fff"/><circle cx="14" cy="14" r="13.5" stroke="#000" stroke-opacity=".2"/><path d="M14 8.447c1.81 0 2.024.007 2.738.04.43.005.855.084 1.258.233a2.244 2.244 0 011.286 1.286c.15.402.228.828.233 1.258.032.714.04.928.04 2.737 0 1.809-.007 2.023-.04 2.737a3.76 3.76 0 01-.233 1.259 2.243 2.243 0 01-1.286 1.285c-.403.15-.828.228-1.258.234-.714.032-.928.039-2.737.039-1.81 0-2.024-.007-2.738-.04a3.758 3.758 0 01-1.258-.233 2.244 2.244 0 01-1.286-1.285 3.758 3.758 0 01-.233-1.259c-.032-.714-.04-.928-.04-2.737 0-1.809.008-2.023.04-2.737.005-.43.084-.855.233-1.258a2.243 2.243 0 011.286-1.286c.403-.15.829-.228 1.258-.233.715-.033.929-.04 2.738-.04zm0-1.22c-1.838 0-2.07.007-2.792.04a4.973 4.973 0 00-1.645.315c-.452.17-.861.437-1.2.782a3.318 3.318 0 00-.782 1.2 4.974 4.974 0 00-.314 1.645c-.033.721-.04.953-.04 2.792 0 1.838.007 2.07.04 2.793.011.562.118 1.118.315 1.645.17.452.437.861.782 1.2.338.344.747.611 1.2.781a4.972 4.972 0 001.645.315c.722.032.953.04 2.792.04 1.84 0 2.07-.007 2.793-.04a4.972 4.972 0 001.645-.315 3.468 3.468 0 001.981-1.982 4.974 4.974 0 00.315-1.645c.032-.722.04-.954.04-2.792 0-1.839-.008-2.07-.04-2.793a4.974 4.974 0 00-.316-1.645 3.32 3.32 0 00-.781-1.2 3.319 3.319 0 00-1.2-.782 4.974 4.974 0 00-1.645-.314c-.722-.033-.954-.04-2.792-.04z" fill="#000"/><path d="M14.002 10.523a3.479 3.479 0 100 6.958 3.479 3.479 0 000-6.958zm0 5.737a2.258 2.258 0 110-4.516 2.258 2.258 0 010 4.516zM17.618 11.198a.813.813 0 100-1.626.813.813 0 000 1.626z" fill="#000"/></symbol>
+		<symbol fill="none" viewBox="0 0 28 28" id="twitter-x" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="14" fill="#fff"/><circle cx="14" cy="14" r="13.5" stroke="#000" stroke-opacity=".2"/><path d="M20.207 10.983a5.106 5.106 0 01-1.327.373c.466-.28.838-.722 1.001-1.258a5.044 5.044 0 01-1.466.56 2.32 2.32 0 00-1.676-.722 2.285 2.285 0 00-2.282 2.28c0 .187.023.35.07.513a6.523 6.523 0 01-4.726-2.398c-.186.35-.302.722-.302 1.141 0 .791.396 1.49 1.024 1.909a2.693 2.693 0 01-1.047-.28v.024a2.3 2.3 0 001.838 2.258c-.186.046-.395.07-.605.07a2.85 2.85 0 01-.442-.047c.303.908 1.14 1.583 2.142 1.583a4.658 4.658 0 01-2.84.978c-.187 0-.373 0-.536-.023a6.478 6.478 0 003.515 1.024c4.214 0 6.519-3.492 6.519-6.518v-.303a4.18 4.18 0 001.14-1.164z" fill="#000"/></symbol>
 </svg>
 
 <!--
@@ -84,82 +78,49 @@ embedded above. They may be styled via CSS.
 			<h3>A) Inline SVG with embedded sprite</h3>
 			<ul>
 
-				<li title="bx_bx-calendar">
+				<li title="close">
 					<div class="icon-box">
 
-						<!-- bx_bx-calendar -->
-						<svg class="svg-bx_bx-calendar-dims">
-							<use xlink:href="#bx_bx-calendar"></use>
+						<!-- close -->
+						<svg class="svg-close-dims">
+							<use xlink:href="#close"></use>
 						</svg>
 
 					</div>
-					<h2>bx_bx-calendar</h2>
+					<h2>close</h2>
 				</li>
-				<li title="bx_bx-clear">
+				<li title="facebook">
 					<div class="icon-box">
 
-						<!-- bx_bx-clear -->
-						<svg class="svg-bx_bx-clear-dims">
-							<use xlink:href="#bx_bx-clear"></use>
+						<!-- facebook -->
+						<svg class="svg-facebook-dims">
+							<use xlink:href="#facebook"></use>
 						</svg>
 
 					</div>
-					<h2>bx_bx-clear</h2>
+					<h2>facebook</h2>
 				</li>
-				<li title="comment-fill">
+				<li title="instagram">
 					<div class="icon-box">
 
-						<!-- comment-fill -->
-						<svg class="svg-comment-fill-dims">
-							<use xlink:href="#comment-fill"></use>
+						<!-- instagram -->
+						<svg class="svg-instagram-dims">
+							<use xlink:href="#instagram"></use>
 						</svg>
 
 					</div>
-					<h2>comment-fill</h2>
+					<h2>instagram</h2>
 				</li>
-				<li title="filter-grid">
+				<li title="twitter-x">
 					<div class="icon-box">
 
-						<!-- filter-grid -->
-						<svg class="svg-filter-grid-dims">
-							<use xlink:href="#filter-grid"></use>
+						<!-- twitter-x -->
+						<svg class="svg-twitter-x-dims">
+							<use xlink:href="#twitter-x"></use>
 						</svg>
 
 					</div>
-					<h2>filter-grid</h2>
-				</li>
-				<li title="filter-row">
-					<div class="icon-box">
-
-						<!-- filter-row -->
-						<svg class="svg-filter-row-dims">
-							<use xlink:href="#filter-row"></use>
-						</svg>
-
-					</div>
-					<h2>filter-row</h2>
-				</li>
-				<li title="heart-fill">
-					<div class="icon-box">
-
-						<!-- heart-fill -->
-						<svg class="svg-heart-fill-dims">
-							<use xlink:href="#heart-fill"></use>
-						</svg>
-
-					</div>
-					<h2>heart-fill</h2>
-				</li>
-				<li title="logo">
-					<div class="icon-box">
-
-						<!-- logo -->
-						<svg class="svg-logo-dims">
-							<use xlink:href="#logo"></use>
-						</svg>
-
-					</div>
-					<h2>logo</h2>
+					<h2>twitter-x</h2>
 				</li>
 			</ul>
 
@@ -182,82 +143,49 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
 			<ul>
 
-				<li title="bx_bx-calendar">
+				<li title="close">
 					<div class="icon-box">
 
-						<!-- bx_bx-calendar -->
-						<svg class="svg-bx_bx-calendar-dims">
-							<use xlink:href="../sprite.svg#bx_bx-calendar"></use>
+						<!-- close -->
+						<svg class="svg-close-dims">
+							<use xlink:href="../sprite.svg#close"></use>
 						</svg>
 
 					</div>
-					<h2>bx_bx-calendar</h2>
+					<h2>close</h2>
 				</li>
-				<li title="bx_bx-clear">
+				<li title="facebook">
 					<div class="icon-box">
 
-						<!-- bx_bx-clear -->
-						<svg class="svg-bx_bx-clear-dims">
-							<use xlink:href="../sprite.svg#bx_bx-clear"></use>
+						<!-- facebook -->
+						<svg class="svg-facebook-dims">
+							<use xlink:href="../sprite.svg#facebook"></use>
 						</svg>
 
 					</div>
-					<h2>bx_bx-clear</h2>
+					<h2>facebook</h2>
 				</li>
-				<li title="comment-fill">
+				<li title="instagram">
 					<div class="icon-box">
 
-						<!-- comment-fill -->
-						<svg class="svg-comment-fill-dims">
-							<use xlink:href="../sprite.svg#comment-fill"></use>
+						<!-- instagram -->
+						<svg class="svg-instagram-dims">
+							<use xlink:href="../sprite.svg#instagram"></use>
 						</svg>
 
 					</div>
-					<h2>comment-fill</h2>
+					<h2>instagram</h2>
 				</li>
-				<li title="filter-grid">
+				<li title="twitter-x">
 					<div class="icon-box">
 
-						<!-- filter-grid -->
-						<svg class="svg-filter-grid-dims">
-							<use xlink:href="../sprite.svg#filter-grid"></use>
+						<!-- twitter-x -->
+						<svg class="svg-twitter-x-dims">
+							<use xlink:href="../sprite.svg#twitter-x"></use>
 						</svg>
 
 					</div>
-					<h2>filter-grid</h2>
-				</li>
-				<li title="filter-row">
-					<div class="icon-box">
-
-						<!-- filter-row -->
-						<svg class="svg-filter-row-dims">
-							<use xlink:href="../sprite.svg#filter-row"></use>
-						</svg>
-
-					</div>
-					<h2>filter-row</h2>
-				</li>
-				<li title="heart-fill">
-					<div class="icon-box">
-
-						<!-- heart-fill -->
-						<svg class="svg-heart-fill-dims">
-							<use xlink:href="../sprite.svg#heart-fill"></use>
-						</svg>
-
-					</div>
-					<h2>heart-fill</h2>
-				</li>
-				<li title="logo">
-					<div class="icon-box">
-
-						<!-- logo -->
-						<svg class="svg-logo-dims">
-							<use xlink:href="../sprite.svg#logo"></use>
-						</svg>
-
-					</div>
-					<h2>logo</h2>
+					<h2>twitter-x</h2>
 				</li>
 			</ul>
 
@@ -267,7 +195,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Fri, 17 Jul 2026 07:59:50 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+			<p>Generated at Fri, 28 Aug 2026 15:02:33 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

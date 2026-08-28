@@ -7,12 +7,12 @@ html {
 }
 
 body {
-	@include fluid-text(18, 14);
+	@include fluid-text(16, 14);
 	color: var(--color-light);
-	background-color: #79eff3;
+	background-color: transparent;
 	font-family: var(--font-family-base);
 	overscroll-behavior: none;
-	line-height: 1.3;
+	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
 	font-weight: 400;
@@ -24,10 +24,10 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	min-height: 100svh;
+	height: 100svh;
 	width: 100%;
-	overflow: hidden;
 	min-block-size: 100%;
+	justify-content: space-between;
 }
 
 

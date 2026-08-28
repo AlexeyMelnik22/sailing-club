@@ -1,0 +1,18 @@
+@use "helpers" as *;
+
+.hero {
+  &__inner {
+
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: rem(20);
+  }
+  &__text {
+    max-width: rem(700);
+    font-size: em(18);
+  }
+  &__action {
+    margin-top: rem(30);
+  }
+}

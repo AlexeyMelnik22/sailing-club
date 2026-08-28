@@ -3,10 +3,12 @@
 :root {
 	--color-dark: #000000;
 	--color-light: #ffffff;
-	--color-gray: #C8C8C8;
-	--color-gray-1: #929292;
+	--color-gray: #353535;
+	--color-gray-1: #636264;
 	--color-gray-2: #5F5F5F;
-	--color-gray-3: #636264;
+	--color-gray-3: #929292;
+
+
 
 	--color-primary: var(--color-dark);
 
@@ -19,7 +21,7 @@
 	--font-family-secondary: "Montserrat", sans-serif;
 
 	--container-width: #{rem(1697)};
-	--container-padding-x: #{rem(16)};
+	--container-padding-x: #{rem(32)};
 	//@include mobile {
 	//	--container-width: #{rem(400)};
 	//}
@@ -32,10 +34,9 @@
 	//buttons
 
 	//primary
-	--btn-primary-color: var(--color-gray-1);
-	--btn-primary-bg: transparent;
-	--btn-primary-border: var(--color-gray-1);
-	--btn-primary-border-active: var(--color-dark);
-	--btn-primary-color-active: var(--color-dark);
+	--btn-primary-color: var(--color-dark);
+	--btn-primary-bg: var(--color-light);
+	--btn-primary-color-active: var(--color-light);
+	--btn-primary-bg-active: var(--color-dark);
 
 }

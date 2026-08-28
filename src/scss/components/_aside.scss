@@ -1,0 +1,197 @@
+@use 'helpers' as *;
+
+$menu-width: 390px;
+$menu-bg: var(--color-light);
+$menu-text: var(--color-dark);
+$menu-overlay: rgba(0, 0, 0, 0.35);
+$transition-time: 0.4s;
+
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+
+  visibility: hidden;
+  opacity: 0;
+
+  background-color: $menu-overlay;
+
+  transition:
+          opacity $transition-time ease,
+          visibility $transition-time ease;
+
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 95;
+
+  display: flex;
+  flex-direction: column;
+
+  width: min($menu-width, 88vw);
+  height: 100dvh;
+  padding: 106px 44px 45px;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  color: $menu-text;
+  background-color: $menu-bg;
+
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.12);
+  transform: translateX(100%);
+
+  transition: transform $transition-time cubic-bezier(0.22, 1, 0.36, 1);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  a {
+    position: relative;
+
+    display: inline-block;
+
+    color: $menu-text;
+    font-size: clamp(22px, 2vw, 28px);
+    font-weight: 400;
+    line-height: 1.25;
+    text-decoration: none;
+
+    transition:
+            color 0.25s ease,
+            transform 0.25s ease;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -4px;
+      left: 0;
+
+      width: 0;
+      height: 1px;
+
+      content: '';
+      background-color: currentColor;
+
+      transition: width 0.25s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-gray-1);
+      transform: translateX(5px);
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid $menu-text;
+      outline-offset: 5px;
+    }
+  }
+}
+
+.menu-close {
+  position: absolute;
+  top: rem(20);
+  left: rem(22);
+
+  display: grid;
+  place-items: center;
+
+  width: rem(38);
+  height: rem(38);
+  padding: 0;
+
+  border: 0;
+  border-radius: rem(5);
+
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  fill: var(--color-light);
+
+  font-size: em(30);
+  font-weight: 400;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+          background-color 0.25s ease,
+          transform 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-dark);
+    transform: rotate(90deg);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-gray);
+    outline-offset: 4px;
+  }
+}
+
+body.menu-is-open {
+  overflow: hidden;
+}
+
+@include mobile {
+  .menu-toggle {
+    top: rem(16);
+    right: rem(16);
+  }
+
+  .side-menu {
+    width: min(#{rem(360)}, 92vw);
+    padding: rem(90) rem(28) rem(32);
+  }
+
+  .menu-close {
+    top: rem(16);
+    left: rem(16);
+  }
+
+  .side-menu {
+    nav {
+      gap: rem(14);
+    }
+
+    a {
+      font-size: rem(23);
+    }
+  }
+}
+@include mobile-s {
+  .side-menu {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle,
+  .menu-toggle span,
+  .menu-backdrop,
+  .side-menu,
+  .side-menu a,
+  .side-menu a::after,
+  .menu-close {
+    transition: none;
+  }
+}

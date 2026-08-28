@@ -2,12 +2,12 @@
 
 .btn {
 	position: relative;
-	width: rem(111);
-	height: rem(28);
-	border-radius: rem(50);
-	font-size: em(11);
+	width: rem(140);
+	height: rem(45);
+	border-radius: rem(5);
+	font-size: em(16);
 	font-weight: 500;
-	padding: 0 rem(8);
+	padding: rem(10) rem(30);
 	text-align: center;
 	cursor: pointer;
 	display: inline-flex;
@@ -19,14 +19,15 @@
 	box-shadow: none;
 	transition: var(--transition-duration);
 	z-index: 1;
-	border: 1px solid transparent;
+	word-spacing: 2rem;
+	letter-spacing: rem(2);
 	&__primary {
 		position: relative;
 		overflow: hidden;
 		color: var(--btn-primary-color);
-		border: 1px solid var(--btn-primary-border);
+		background-color: var(--btn-primary-bg);
 		&:hover {
-			border-color: var(--btn-primary-border-active);
+			background-color: var(--btn-primary-bg-active);
 			color: var(--btn-primary-color-active);
 		}
 	}

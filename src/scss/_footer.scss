@@ -1,1 +1,16 @@
 @use 'helpers' as *;
+
+.footer {
+  &__inner {
+    padding-block: rem(40);
+  }
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: rem(25);
+    &__icon {
+      fill: var(--color-light);
+      @include square(rem(28))
+    }
+  }
+}
