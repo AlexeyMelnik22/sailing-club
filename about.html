@@ -8,9 +8,9 @@
 	<title>About us</title>
 
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/main.min.css?_v=20260830215655">
 
-	<script defer="defer" src="js/main.min.js"></script>
+	<script defer="defer" src="js/main.min.js?_v=20260830215655"></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 	<header class="header">
 	<div class="container header__inner">
 		<a aria-label="Home" title="Home" href="./" class="header__logo">
-			<img src="../images/logo.png" alt="Logo" class="logo" width="170" height="100">
+			<img src="images/logo.png" alt="Logo" class="logo" width="170" height="100">
 		</a>
 		<div class="header__content">
 			<button class="menu-toggle burger__button header__burger-menu icon-menu">
@@ -46,10 +46,9 @@
 	</nav>
 </aside>
 	<div class="video-background">
-		<video id="bg-video" autoplay muted loop playsinline preload="auto">
-			<source src="static/videos/bg-sailing-1.mp4" type="video/mp4">
-			<source src="static/videos/bg-sailing-1.webm" type="video/webm">
-		</video>
+		<video class="bg-video bg-video--active" autoplay muted loop playsinline preload="auto"></video>
+
+		<video class="bg-video" muted loop playsinline preload="auto"></video>
 		<div class="overlay"></div>
 	</div>
 	<main class="page">
