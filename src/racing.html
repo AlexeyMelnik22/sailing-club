@@ -8,16 +8,21 @@
 	@@include('html/header.html')
 	<div class="video-background">
 		<video
-				id="bg-video"
+				class="bg-video bg-video--active"
 				autoplay
 				muted
 				loop
 				playsinline
 				preload="auto"
-		>
-			<source src="static/videos/bg-sailing-1.mp4" type="video/mp4">
-			<source src="static/videos/bg-sailing-1.webm" type="video/webm">
-		</video>
+		></video>
+
+		<video
+				class="bg-video"
+				muted
+				loop
+				playsinline
+				preload="auto"
+		></video>
 		<div class="overlay"></div>
 	</div>
 	<main class="page">

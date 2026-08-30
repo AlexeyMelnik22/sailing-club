@@ -9,6 +9,7 @@ BaseHelpers.addTouchClass();
 BaseHelpers.addLoadedClass();
 
 
+//menu sidebar
 const menuToggles = document.querySelectorAll('.menu-toggle');
 const sideMenu = document.querySelector('.side-menu');
 const backdrop = document.querySelector('.menu-backdrop');
@@ -78,4 +79,102 @@ if (menuToggles.length && sideMenu && backdrop) {
             closeMenu(true);
         }
     });
+}
+
+
+//video bg transition
+const videoSources = [
+    'static/videos/bg-video-1.mp4',
+    'static/videos/bg-video-2.mp4',
+    'static/videos/bg-video-3.mp4',
+    'static/videos/bg-video-4.mp4'
+];
+
+const videos = [...document.querySelectorAll('.bg-video')];
+
+const DISPLAY_TIME = 7000;
+const FADE_DURATION = 1200;
+
+let currentIndex = Math.floor(Math.random() * videoSources.length);
+let activeVideoIndex = 0;
+let isChanging = false;
+let intervalId;
+
+if (videos.length >= 2 && videoSources.length) {
+    const [firstVideo] = videos;
+
+    // First video start immediately
+    firstVideo.src = videoSources[currentIndex];
+    firstVideo.load();
+
+    firstVideo.addEventListener(
+        'canplay',
+        () => {
+            firstVideo.play().catch(() => {});
+            startVideoRotation();
+        },
+        { once: true }
+    );
+
+    firstVideo.play().catch(() => {});
+
+    function startVideoRotation() {
+        clearInterval(intervalId);
+
+        intervalId = setInterval(() => {
+            changeBackgroundVideo();
+        }, DISPLAY_TIME);
+    }
+    function getRandomVideoIndex(currentIndex) {
+        if (videoSources.length <= 1) {
+            return 0;
+        }
+
+        let randomIndex;
+
+        do {
+            randomIndex = Math.floor(Math.random() * videoSources.length);
+        } while (randomIndex === currentIndex);
+
+        return randomIndex;
+    }
+    function changeBackgroundVideo() {
+        if (isChanging) {
+            return;
+        }
+
+        isChanging = true;
+
+        const nextIndex = getRandomVideoIndex(currentIndex);
+        const activeVideo = videos[activeVideoIndex];
+        const nextVideoIndex = activeVideoIndex === 0 ? 1 : 0;
+        const nextVideo = videos[nextVideoIndex];
+
+        // start next video
+        nextVideo.src = videoSources[nextIndex];
+        nextVideo.currentTime = 0;
+        nextVideo.load();
+
+        nextVideo.addEventListener(
+            'canplay',
+            () => {
+                nextVideo.play().catch(() => {});
+
+                // transition start
+                nextVideo.classList.add('bg-video--active');
+                activeVideo.classList.remove('bg-video--active');
+
+                setTimeout(() => {
+                    activeVideo.pause();
+                    activeVideo.removeAttribute('src');
+                    activeVideo.load();
+
+                    currentIndex = nextIndex;
+                    activeVideoIndex = nextVideoIndex;
+                    isChanging = false;
+                }, FADE_DURATION);
+            },
+            { once: true }
+        );
+    }
 }

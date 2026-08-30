@@ -153,11 +153,6 @@ body.menu-is-open {
 }
 
 @include mobile {
-  .menu-toggle {
-    top: rem(16);
-    right: rem(16);
-  }
-
   .side-menu {
     width: min(#{rem(360)}, 92vw);
     padding: rem(90) rem(28) rem(32);
