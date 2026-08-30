@@ -49,6 +49,10 @@ h6, .h6 {
 	letter-spacing: -0.01em;
 }
 
+h3, .h3 {
+	margin-bottom: rem(24);
+}
+
 
 .container {
     max-width: calc(var(--container-width) +  var(--container-padding-x) *2);

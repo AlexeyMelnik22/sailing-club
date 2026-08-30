@@ -2,7 +2,7 @@
 
 .btn {
 	position: relative;
-	width: rem(140);
+	min-width: rem(140);
 	height: rem(45);
 	border-radius: rem(5);
 	font-size: em(16);
@@ -19,7 +19,6 @@
 	box-shadow: none;
 	transition: var(--transition-duration);
 	z-index: 1;
-	word-spacing: 2rem;
 	letter-spacing: rem(2);
 	&__primary {
 		position: relative;

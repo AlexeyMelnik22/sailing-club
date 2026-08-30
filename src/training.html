@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('html/head.html', {
+'title': 'Training'
+})
+<body>
+<div class="wrapper">
+	@@include('html/header.html')
+	<div class="video-background">
+		<video
+				id="bg-video"
+				autoplay
+				muted
+				loop
+				playsinline
+				preload="auto"
+		>
+			<source src="static/videos/bg-sailing-1.mp4" type="video/mp4">
+			<source src="static/videos/bg-sailing-1.webm" type="video/webm">
+		</video>
+		<div class="overlay"></div>
+	</div>
+	<main class="page">
+		<section class="hero">
+			<div class="container hero__inner">
+				<h2 class="hero__title h2">
+					Training and Clinics
+				</h2>
+				<h3 class="h3">4-Day Intensive Multihull Training & Racing Session</h3>
+				<div class="hero__text">
+					<p>
+						Take your multihull performance to the next level in the trade winds of Sint Maarten. Designed exclusively for Diam 24 and Formula 18 sailors, this four-day intensive program bridges the gap between technical theory and high-stakes fleet racing.
+					</p>
+				</div>
+				<h3 class="h3">Advanced Sail Trim Masterclass</h3>
+				<div class="hero__text">
+					<p>
+						This clinic focuses on the theoretical and practical application of multihull sail trim. We cover mainsail twist profiles, jib lead angles to manage the slot, rig tuning, wing mast rotation and sailing to target speed and angle.
+					</p>
+				</div>
+				<h3 class="h3">Training Clinic and Race Prep</h3>
+				<div class="hero__text">
+					<p>
+						We run these clinics before all World Diam 24 Tour races and adjust the curriculum to the goals of each team. We typically cover boat preparation and tuning, starts, sailing to targets, maneuvers, tactics, and many other topics.
+					</p>
+				</div>
+				<div class="hero__action">
+					<a download="SMSC-Sailing-Program.pdf" href="./static/pdf/Righting-after-capsize-5.pdf" class="btn btn__primary">Download Details</a>
+					<button class="btn btn__primary menu-toggle">Explore</button>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('html/footer.html')
+</div>
+</body>
+</html>

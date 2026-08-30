@@ -6,13 +6,18 @@
   }
   &__title {
     text-transform: uppercase;
-    margin-bottom: rem(20);
+    margin-bottom: rem(24);
   }
   &__text {
     max-width: rem(700);
     font-size: em(18);
+    margin-bottom: rem(24);
   }
   &__action {
-    margin-top: rem(30);
+    //margin-top: rem(30);
+    display: inline-flex;
+    flex-direction: column;
+    gap: rem(20);
+    align-items: flex-start;
   }
 }
