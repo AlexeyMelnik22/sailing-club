@@ -25,8 +25,13 @@
       }
     }
     .header__logo {
+      display: flex;
+      flex-shrink: 0;
       .logo {
         text-transform: uppercase;
+        width: fluid(170, 85);
+        height: fluid(100, 45);
+        object-fit: contain;
       }
     }
   }
