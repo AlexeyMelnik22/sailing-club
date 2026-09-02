@@ -8,9 +8,9 @@
 	<title>Training</title>
 
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/main.min.css?_v=20260830215655">
+	<link rel="stylesheet" href="css/main.min.css">
 
-	<script defer="defer" src="js/main.min.js?_v=20260830215655"></script>
+	<script defer="defer" src="js/main.min.js"></script>
 </head>
 
 <body>
@@ -20,7 +20,26 @@
 		<a aria-label="Home" title="Home" href="./" class="header__logo">
 			<img src="images/logo.png" alt="Logo" class="logo" width="170" height="100">
 		</a>
-		<div class="header__content">
+		<nav class="header__nav hidden-mobile nav">
+			<ul class="nav__list">
+				<li class="nav__item">
+					<a class="link nav__link" title="Sailboats" href="./sailboats.html">Sailboats</a>
+				</li>
+				<li class="nav__item">
+					<a class="link nav__link" title="Training" href="./training.html">Training</a>
+				</li>
+				<li class="nav__item">
+					<a class="link nav__link" title="Racing" href="./racing.html">Racing</a>
+				</li>
+				<li class="nav__item">
+					<a class="link nav__link" title="Charters" href="./charters.html">Charters</a>
+				</li>
+				<li class="nav__item">
+					<a class="link nav__link" title="About" href="./about.html">About</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="header__content visible-mobile">
 			<button class="menu-toggle burger__button header__burger-menu icon-menu">
 				<span class="burger__line"></span>
 				<span class="burger__line"></span>
