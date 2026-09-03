@@ -1,6 +1,15 @@
 @use "helpers" as *;
 
+.hero:where(:not(:last-child)) {
+
+}
 .hero {
+  //min-height: calc(100vh - rem(190));
+  //min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &__inner {
 
   }
@@ -10,8 +19,15 @@
   }
   &__text {
     max-width: rem(700);
-    font-size: em(18);
+    @include fluid-text(18, 16);
     margin-bottom: rem(24);
+  }
+  &__list {
+    margin-bottom: rem(24);
+    list-style: initial;
+    line-height: rem(30);
+    padding-left: rem(18);
+    @include fluid-text(18, 16);
   }
   &__action {
     //margin-top: rem(30);
