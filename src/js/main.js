@@ -103,28 +103,26 @@ let intervalId;
 if (videos.length >= 2 && videoSources.length) {
     const [firstVideo] = videos;
 
-    // First video start immediately
     firstVideo.src = videoSources[currentIndex];
     firstVideo.load();
 
     firstVideo.addEventListener(
-        'canplay',
+        'loadeddata',
         () => {
             firstVideo.play().catch(() => {});
+            firstVideo.classList.add('bg-video--active');
+
             startVideoRotation();
         },
         { once: true }
     );
 
-    firstVideo.play().catch(() => {});
-
     function startVideoRotation() {
         clearInterval(intervalId);
 
-        intervalId = setInterval(() => {
-            changeBackgroundVideo();
-        }, DISPLAY_TIME);
+        intervalId = setInterval(changeBackgroundVideo, DISPLAY_TIME);
     }
+
     function getRandomVideoIndex(currentIndex) {
         if (videoSources.length <= 1) {
             return 0;
@@ -138,6 +136,7 @@ if (videos.length >= 2 && videoSources.length) {
 
         return randomIndex;
     }
+
     function changeBackgroundVideo() {
         if (isChanging) {
             return;
@@ -150,29 +149,35 @@ if (videos.length >= 2 && videoSources.length) {
         const nextVideoIndex = activeVideoIndex === 0 ? 1 : 0;
         const nextVideo = videos[nextVideoIndex];
 
-        // start next video
+        nextVideo.classList.remove('bg-video--active');
         nextVideo.src = videoSources[nextIndex];
-        nextVideo.currentTime = 0;
         nextVideo.load();
 
         nextVideo.addEventListener(
-            'canplay',
+            'loadeddata',
             () => {
-                nextVideo.play().catch(() => {});
+                nextVideo.currentTime = 0;
 
-                // transition start
-                nextVideo.classList.add('bg-video--active');
-                activeVideo.classList.remove('bg-video--active');
+                nextVideo.play()
+                    .then(() => {
+                        nextVideo.classList.add('bg-video--active');
+                        activeVideo.classList.remove('bg-video--active');
 
-                setTimeout(() => {
-                    activeVideo.pause();
-                    activeVideo.removeAttribute('src');
-                    activeVideo.load();
+                        setTimeout(() => {
+                            activeVideo.pause();
+                            activeVideo.removeAttribute('src');
+                            activeVideo.load();
 
-                    currentIndex = nextIndex;
-                    activeVideoIndex = nextVideoIndex;
-                    isChanging = false;
-                }, FADE_DURATION);
+                            currentIndex = nextIndex;
+                            activeVideoIndex = nextVideoIndex;
+                            isChanging = false;
+                        }, FADE_DURATION);
+                    })
+                    .catch(() => {
+                        // Якщо autoplay заблокований браузером,
+                        // повертаємо можливість повторити спробу пізніше.
+                        isChanging = false;
+                    });
             },
             { once: true }
         );
