@@ -129,12 +129,12 @@ button {
 /**
   one color fill for all svg
  */
-:where([fill]:not(
-  [fill="none"],
-  [fill^="url"]
-)) {
-	fill: currentColor;
-}
+//:where([fill]:not(
+//  [fill="none"],
+//  [fill^="url"]
+//)) {
+//	fill: currentColor;
+//}
 
 /**
  one color stroke for all svg

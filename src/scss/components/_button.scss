@@ -1,5 +1,20 @@
 @use "helpers" as *;
 
+//sub body change colors
+.sub-body {
+	.btn {
+		&__primary {
+			position: relative;
+			overflow: hidden;
+			color: var(--color-light);
+			background-color: var(--sub-body-color);
+			&:hover {
+				background-color: #3b2c85;
+				color: var(--color-light);
+			}
+		}
+	}
+}
 .btn {
 	position: relative;
 	min-width: rem(140);

@@ -131,3 +131,44 @@
     }
   }
 }
+
+//sub body change colors
+.sub-body {
+  .header {
+    &__inner {
+      .header__content {
+        .burger__button {
+          background-color: var(--sub-body-color);
+          .burger__line {
+
+          }
+        }
+      }
+    }
+    .header__logo {
+      filter: brightness(0) saturate(100%) invert(21%) sepia(46%) saturate(2585%) hue-rotate(234deg) brightness(94%) contrast(99%);
+    }
+    &__nav {
+      .nav__list {
+        .nav__item {
+          .nav__link {
+            @include link-color(var(--sub-body-color))
+          }
+        }
+      }
+    }
+    .nav {
+      &__arrow {
+        filter: brightness(0) saturate(100%) invert(21%) sepia(46%) saturate(2585%) hue-rotate(234deg) brightness(94%) contrast(99%);
+      }
+
+      &__submenu-link {
+        color: var(--sub-body-color);
+        &:hover,
+        &:focus-visible {
+          background-color: var(--color-gray-5);
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,10 @@ $menu-text: var(--color-dark);
 $menu-overlay: rgba(0, 0, 0, 0.35);
 $transition-time: 0.4s;
 
+//sub body change colors
+.sub-body {
+
+}
 .menu-backdrop {
   position: fixed;
   inset: 0;
@@ -204,5 +208,31 @@ body.menu-is-open {
   .side-menu a::after,
   .menu-close {
     transition: none;
+  }
+}
+
+
+//sub body change colors
+.sub-body {
+  $menu-text: var(--sub-body-color);
+  .menu-close {
+    background-color: var(--sub-body-color);
+  }
+  .side-menu {
+    color: $menu-text;
+    &.is-open {
+      transform: translateX(0);
+    }
+    .side-menu__list {
+      .side-menu__item {
+        .side-menu__link {
+          color: $menu-text;
+          &.side-menu__sub--link {
+            color: $menu-text;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
   }
 }
