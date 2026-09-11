@@ -17,11 +17,36 @@
 <div class="wrapper">
 	<header class="header">
 	<div class="container header__inner">
-		<a aria-label="Home" title="Home" href="./" class="header__logo">
+		<a aria-label="Home" title="Home" href="./index.html" class="header__logo">
 			<img src="images/logo.png" alt="Logo" class="logo" width="170" height="100">
 		</a>
 		<nav class="header__nav hidden-mobile nav" aria-label="Main navigation">
 			<ul class="nav__list">
+				<!--				
+				<li class="nav__item nav__item--dropdown">
+					<button class="nav__link nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="services-submenu">
+						Sailboats
+						<svg class="nav__arrow icon" width="18" height="18">
+							<use href="images/sprite.svg#arrow-chevron"></use>
+						</svg>
+					</button>
+
+					<ul class="nav__submenu" id="services-submenu">
+						<li><a href="./sailboats.html" class="nav__submenu-link">Sailboats</a></li> 
+						<li><a href="./sailboats-diam24.html" class="nav__submenu-link">Diam24</a></li>
+						<li><a href="./sailboats-f18.html" class="nav__submenu-link">F18</a></li>
+						<li><a href="./sailboats-orc50.html" class="nav__submenu-link">ORC 50</a></li>
+					</ul>
+					
+				</li>
+				-->
+
+				<li class="nav__item">
+					<a class="nav__link link" title="Training" href="./training.html">Training</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__link link" title="Racing" href="./racing.html">Racing</a>
+				</li>
 				<li class="nav__item nav__item--dropdown">
 					<button class="nav__link nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="services-submenu">
 						Sailboats
@@ -30,22 +55,50 @@
 						</svg>
 					</button>
 					<ul class="nav__submenu" id="services-submenu">
-						<li><a href="./sailboats.html" class="nav__submenu-link">Sailboats</a></li>
-						<li><a href="./sailboats-diam24.html" class="nav__submenu-link">Sailboats Diam24</a></li>
+						<!--<li><a href="./sailboats.html" class="nav__submenu-link">Sailboats</a></li>  -->
+						<li><a href="./sailboats-diam24.html" class="nav__submenu-link">Diam24</a></li>
+						<li><a href="./sailboats-f18.html" class="nav__submenu-link">F18</a></li>
+						<li><a href="./sailboats-orc50.html" class="nav__submenu-link">ORC 50</a></li>
+						<li><a href="./charters.html" class="nav__submenu-link">Charters</a></li>
 					</ul>
 				</li>
-				<li class="nav__item">
-					<a class="nav__link link" title="Training" href="./training.html">Training</a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link link" title="Racing" href="./racing.html">Racing</a>
-				</li>
+				<!--
 				<li class="nav__item">
 					<a class="nav__link link" title="Charters" href="./charters.html">Charters</a>
-				</li>
+				</li>		
+			
 				<li class="nav__item">
+					<a class="nav__link link" title="Saint Martin" href="./saint-martin.html">Saint Martin</a>
+				</li>
+			
+				<li class="nav__item">
+					<a class="nav__link link" title="Membership" href="./membership.html">Membership</a>
+				</li>
+				
+
+ 				<li class="nav__item">
 					<a class="nav__link link" title="About" href="./about.html">About</a>
 				</li>
+				-->
+
+				<li class="nav__item nav__item--dropdown">
+					<button class="nav__link nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="services-submenu">
+						About
+						<svg class="icon nav__arrow" width="18" height="18">
+							<use href="images/sprite.svg#arrow-chevron"></use>
+						</svg>
+					</button>
+					<ul class="nav__submenu" id="services-submenu">
+						<li><a href="./about.html" class="nav__submenu-link">About SMSC</a></li>
+						<li><a href="./saint-martin.html" class="nav__submenu-link">Saint Martin</a></li>
+						<li><a href="./privacy-policy.html" class="nav__submenu-link">Privacy Policy</a></li>
+						<li><a href="./media-credits.html" class="nav__submenu-link">Media Credits</a></li>
+					</ul>
+				</li>
+
+
+
+
 			</ul>
 		</nav>
 		<div class="header__content visible-mobile">
@@ -65,17 +118,22 @@
 		</svg>
 	</button>
 	<nav aria-label="Main navigation" class="side-menu__nav">
+
 		<ul class="side-menu__list">
 			<li class="side-menu__item">
 				<a class="side-menu__link" href="./">Home</a>
 			</li>
 		</ul>
+		<!--
 		<ul class="side-menu__list">
 			<li class="side-menu__item">
 				<a class="side-menu__link" href="./sailboats.html">Sailboats</a>
-				<a href="./sailboats-diam24.html" class="side-menu__link side-menu__sub--link">Sailboats Diam24</a>
+				<a href="./sailboats-diam24.html" class="side-menu__link side-menu__sub--link">Diam24</a>
+				<a href="./sailboats-f18.html" class="side-menu__link side-menu__sub--link">F18</a>
+				<a href="./sailboats-orc50.html" class="side-menu__link side-menu__sub--link">ORC 50</a>
 			</li>
 		</ul>
+		-->
 		<ul class="side-menu__list">
 			<li class="side-menu__item">
 				<a class="side-menu__link" href="./training.html">Training</a>
@@ -85,21 +143,54 @@
 		<ul class="side-menu__list">
 			<li class="side-menu__item">
 				<a class="side-menu__link" href="./racing.html">Racing</a>
-
+			</li>
+		</ul>
+		<ul class="side-menu__list">
+			<li class="side-menu__item">
+				<a class="side-menu__link" href="">Sailboats</a>
+				<a href="./sailboats-diam24.html" class="side-menu__link side-menu__sub--link">Diam24</a>
+				<a href="./sailboats-f18.html" class="side-menu__link side-menu__sub--link">F18</a>
+				<a href="./sailboats-orc50.html" class="side-menu__link side-menu__sub--link">ORC 50</a>
+				<a href="./charters.html" class="side-menu__link side-menu__sub--link">Charters</a>
 			</li>
 		</ul>
 		<ul class="side-menu__list">
 			<li class="side-menu__item">
 				<a class="side-menu__link" href="./charters.html">Charters</a>
+			</li>
+		</ul>
+		<ul class="side-menu__list">
+			<li class="side-menu__item">
+				<a class="side-menu__link" href="./saint-martin.html">Saint Martin</a>
 
 			</li>
 		</ul>
+		<!--
+		<ul class="side-menu__list">
+			<li class="side-menu__item">
+				<a class="side-menu__link" href="./membership.html">Membership</a>
+
+			</li>
+		</ul>
+		
 		<ul class="side-menu__list">
 			<li class="side-menu__item">
 				<a class="side-menu__link" href="./about.html">About</a>
 
 			</li>
 		</ul>
+-->
+		<ul class="side-menu__list">
+			<li class="side-menu__item">
+				<a class="side-menu__link" href="">About</a>
+				<a href="./about.html" class="side-menu__link side-menu__sub--link">About SMSC</a>
+				<a href="./saint-martin.html" class="side-menu__link side-menu__sub--link">Saint Martin</a>
+				<a href="./privacy-policy.html" class="side-menu__link side-menu__sub--link">Privacy Policy</a>
+				<a href="./media-credits.html" class="side-menu__link side-menu__sub--link">Media Credits</a>
+			</li>
+		</ul>
+
+
 	</nav>
 </aside>
 	<main class="page">
@@ -110,16 +201,15 @@
 						Diam 24 One Design
 					</h2>
 
-					<p class="hero__text">The Diam 24 is a 24-foot (7.25m) one-design racing trimaran built by ADH inotec to a VPLP
-						design, built for acceleration: a fully battened, square-top mainsail, a rotating carbon
+					<p class="hero__text">The Diam 24 is a 24-foot (7.25m) one-design racing trimaran built by ADH Inotec to a VPLP
+						design. It is built for acceleration: a fully battened, square-top mainsail, a rotating carbon
 						mast, and high-volume piercing bows that keep the boat driving forward instead of digging
-						in. It's a proven fleet-racing boat first, but its stability and forgiving manners also make
+						in. It is a proven one-design racing boat first, but its stability and forgiving manners also make
 						it a genuine entry point into multihull sailing — rewarding precise driving and accurate
 						trim from day one, with real depth for racers to keep refining for years.</p>
 					<ul class="hero__list">
 						<li>Crew: 3 to 4 sailors (target weight: 250kg – 280kg)</li>
-						<li>Key Focus: Rig tension through the diamond spreaders, mast rotation angle for the point
-							of sail, and traveler-driven power management in Caribbean gusts.</li>
+						<li>Key Focus: Rig tension through the diamond spreaders, mast rotation angle, dynamic crew weight placement and mainsail power management.</li>
 					</ul>
 					<h3 class="h3">Core Characteristics</h3>
 					<ul class="hero__list">
@@ -145,8 +235,11 @@
 						racing, with 20+ knot boatspeeds downwind in a good breeze.
 					</p>
 					<div class="hero__action">
-						<a download="SMSC-Sailing-Program.pdf" href="./static/pdf/Righting-after-capsize-5.pdf" class="btn btn__primary">Download Details</a>
-						<button class="btn btn__primary menu-toggle">Explore</button>
+						<!--
+						<a download="SMSC-Sailing-Program.pdf" href="./static/pdf/Righting-after-capsize-5.pdf"
+						   class="btn btn__primary">Download Details</a>
+						-->
+						<button class="menu-toggle btn btn__primary">Explore</button>
 					</div>
 				</div>
 			</div>
