@@ -319,7 +319,6 @@ document.querySelectorAll('.faq__toggle').forEach((toggle) => {
         const content = item.querySelector('.faq__content');
         const isActive = item.classList.contains('active');
 
-        // Закрити всі інші (якщо потрібен акордеон, а не просто toggle)
         document.querySelectorAll('.faq__item.active').forEach((activeItem) => {
             if (activeItem !== item) {
                 activeItem.classList.remove('active');
@@ -327,8 +326,7 @@ document.querySelectorAll('.faq__toggle').forEach((toggle) => {
                 activeItem.querySelector('.faq__content').style.maxHeight = '0';
             }
         });
-
-        // Перемкнути поточний
+        
         item.classList.toggle('active');
         const expanded = !isActive;
         toggle.setAttribute('aria-expanded', String(expanded));
