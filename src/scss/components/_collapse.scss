@@ -11,14 +11,6 @@
       }
     }
   }
-  &__title {
-    font-size: em(38);
-    margin-bottom: rem(30);
-  }
-  &__desc {
-    color: var(--color-gray-2);
-    font-size: em(18);
-  }
   &__group {
     margin-block: rem(50);
     .group__title {

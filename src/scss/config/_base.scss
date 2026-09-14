@@ -101,17 +101,6 @@ h3, .h3 {
 	&.link-blue {
 		@include link-color(var(--color-blue));
 	}
-	&__select {
-		&:after {
-			margin-left: rem(6);
-			display: flex;
-			flex-shrink: 0;
-			position: relative;
-			content: "";
-			@include square(rem(16));
-			background: url("../images/icons/chevron-down.svg") center/ contain no-repeat;
-		}
-	}
 }
 
 //sub body change colors

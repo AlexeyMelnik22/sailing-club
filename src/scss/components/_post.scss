@@ -1,0 +1,19 @@
+@use "helpers" as *;
+
+.post {
+  padding-block: rem(70);
+  &__chapter {
+    margin-bottom: fluid(50, 30);
+    &--title {
+
+    }
+    &--text {
+      margin-bottom: rem(30);
+      font-weight: 300;
+    }
+  }
+  &__cta {
+    padding-top: rem(70);
+    border-top: 1px solid #e5e7eb;
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('html/head.html', {
+'title': 'SXM Sailing - Blog',
+'description': 'Blog page',
+'canonical-page': 'blog.html',
+})
+
+<body class="sub-body">
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<div class="container-xs">
+				<section class="section blog">
+					<h2 class="h2 section__title">Blog</h2>
+					<p class="section__desc">Training tips, technique breakdowns, and everything else we've learned about performance sailing in Saint Martin.
+					</p>
+					@@include('html/article.html', {
+					'article-category': 'Destination',
+					'article-title': "Why Saint Martin Is One of the Caribbean's Best Performance-Sailing Destinations",
+					'article-desc':"Steady trade winds, a real racing pedigree, and boats built for speed — why this island rewards sailors who want to get better, not just relax.",
+					'article-link': 'why-saint-martin.html',
+					})
+					@@include('html/article.html', {
+					'article-category': 'Trip Planning',
+					'article-title': "Best Time of Year to Train in Saint Martin",
+					'article-desc':"A season-by-season breakdown of wind, weather, and when to book your trip.",
+					'article-link': '#',
+					})
+				</section>
+			</div>
+		</main>
+		@@include('html/footer.html')
+	</div>
+</body>
+
+</html>
