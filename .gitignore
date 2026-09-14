@@ -7,3 +7,4 @@
 dist
 node_modules
 gulp/version.json
+src/images/symbol/sprite.symbol.html

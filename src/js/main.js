@@ -311,3 +311,32 @@ if (videos.length >= 2 && videoSources.length) {
         }
     }
 }
+
+//faq
+document.querySelectorAll('.faq__toggle').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+        const item = toggle.closest('.faq__item');
+        const content = item.querySelector('.faq__content');
+        const isActive = item.classList.contains('active');
+
+        // Закрити всі інші (якщо потрібен акордеон, а не просто toggle)
+        document.querySelectorAll('.faq__item.active').forEach((activeItem) => {
+            if (activeItem !== item) {
+                activeItem.classList.remove('active');
+                activeItem.querySelector('.faq__toggle').setAttribute('aria-expanded', 'false');
+                activeItem.querySelector('.faq__content').style.maxHeight = '0';
+            }
+        });
+
+        // Перемкнути поточний
+        item.classList.toggle('active');
+        const expanded = !isActive;
+        toggle.setAttribute('aria-expanded', String(expanded));
+
+        if (expanded) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            content.style.maxHeight = '0';
+        }
+    });
+});
