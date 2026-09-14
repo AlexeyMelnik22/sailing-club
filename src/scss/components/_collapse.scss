@@ -1,0 +1,49 @@
+@use "helpers" as *;
+
+.faq {
+  margin: 0 auto;
+  padding: rem(24) rem(16);
+  &__item {
+    border-bottom: 1px solid #e5e7eb;
+    &.active  {
+      .faq__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__group {
+    margin-block: rem(50);
+    .group__title {
+      margin-bottom: rem(10);
+    }
+  }
+  &__toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(12);
+    padding: rem(16) 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 500;
+  }
+  &__icon {
+    font-size: 20px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  }
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+    p {
+      margin: 0 0 16px;
+      color: var(--color-gray-1);
+      line-height: 1.5;
+    }
+  }
+}

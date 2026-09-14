@@ -9,7 +9,10 @@
 	--color-gray-3: #929292;
 	--color-gray-4: #cfcfcf;
 	--color-gray-5: #eaeaea;
-	--sub-body-color: #000000;       /* TODO */
+	--sub-body-color: #000000;
+
+	--color-accent: #2A9D8F;
+	--color-accent-dark: #1F7A6E;
 
 	--color-primary: var(--color-dark);
 
@@ -21,6 +24,7 @@
 	--font-family-secondary: "Montserrat", sans-serif;
 
 	--container-width: #{rem(1697)};
+	--container-xs-width: #{rem(680)};
 	--container-padding-x: #{rem(32)};
 	//@include mobile {
 	//	--container-width: #{rem(400)};

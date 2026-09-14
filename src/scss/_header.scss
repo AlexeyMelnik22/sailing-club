@@ -111,11 +111,11 @@
     .nav__list {
       display: flex;
       align-items: center;
-      gap: fluid(90, 10);
+      gap: fluid(80, 10);
       min-width: 0;
       .nav__item {
         .nav__link {
-          @include fluid-text(18, 14)
+          @include fluid-text(18, 13)
         }
       }
     }

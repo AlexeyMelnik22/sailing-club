@@ -10,6 +10,7 @@ export const filePaths = {
 		images: `${buildFolder}/images/`,
 		fonts: `${buildFolder}/fonts/`,
 		static: `${buildFolder}/static/`,
+		blog: `${buildFolder}/blog/`,
 	},
 	src: {
 		js: `${srcFolder}/js/*.js`,
@@ -22,6 +23,7 @@ export const filePaths = {
 		svgIcons: `${srcFolder}/icons/*.svg`,
 		fontFacesFile: `${srcFolder}/scss/config/fonts.scss`,
 		fonts: `${srcFolder}/fonts/`,
+		blog: `${srcFolder}/blog/*.html`,
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
@@ -29,6 +31,7 @@ export const filePaths = {
 		html: `${srcFolder}/**/*.html`,
 		images: `${srcFolder}/**/*.{jpg,jpeg,png,svg,gif,webp,ico}`,
 		static: `${srcFolder}/static/**/*.*`,
+		blog: `${srcFolder}/blog/**/*.html`,
 	},
 	buildFolder,
 	srcFolder,

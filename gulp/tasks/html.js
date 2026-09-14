@@ -45,3 +45,28 @@ export const html = (isBuild, serverInstance) => {
 		.pipe(gulp.dest(filePaths.buildFolder))
 		.pipe(serverInstance.stream());
 };
+// 2. For blog pages
+export const blogHtml = (isBuild, serverInstance) => {
+	return gulp.src(filePaths.src.blog)
+		.pipe(logger.handleError('HTML BLOG'))
+		.pipe(fileInclude())
+		.pipe(
+			htmlMin({
+				useShortDoctype: true,
+				sortClassName: true,
+				removeComments: isBuild,
+			}),
+		)
+		.pipe(
+			plugins.if(
+				isBuild,
+				versionNumber({
+					value: '%DT%',
+					append: { key: '_v', cover: 0, to: ['css', 'js'] },
+					output: { file: 'gulp/version.json' },
+				}),
+			),
+		)
+		.pipe(gulp.dest(filePaths.build.blog))
+		.pipe(serverInstance.stream());
+};

@@ -1,0 +1,18 @@
+@use "helpers" as *;
+
+.section {
+  padding-bottom: rem(70);
+  &__title {
+    font-size: em(38);
+    margin-bottom: rem(30);
+  }
+  &__desc {
+    font-size: em(18);
+    color: var(--color-gray-1);
+    margin-bottom: rem(30);
+  }
+  &__subdesk {
+    margin-bottom: rem(50);
+    font-weight: 300;
+  }
+}

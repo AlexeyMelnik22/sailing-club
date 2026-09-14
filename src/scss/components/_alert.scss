@@ -1,0 +1,19 @@
+@use "helpers" as *;
+
+.alert {
+  max-width: rem(540);
+  width: 100%;
+  margin-bottom: rem(30);
+  &__title {
+    color: var(--color-accent-dark);
+    margin-bottom: rem(16);
+  }
+  &__text {
+    color: var(--color-gray-1);
+    line-height: 1.6;
+  }
+  padding: rem(16);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 4px 4px 0;
+  background-color: rgba(42, 157, 143, 0.08);
+}
