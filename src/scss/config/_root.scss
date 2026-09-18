@@ -3,20 +3,23 @@
 :root {
 	--color-dark: #000000;
 	--color-light: #ffffff;
+	--color-text: #1C2430;
+	--color-text-muted: #5B6570;
 	--color-gray: #353535;
-	--color-gray-1: #636264;
+	--color-gray-1: var(--color-text-muted);
 	--color-gray-2: #5F5F5F;
 	--color-gray-3: #929292;
 	--color-gray-4: #cfcfcf;
 	--color-gray-5: #eaeaea;
-	--sub-body-color: #000000;
+	--color-bg: #ffffff;
+	--sub-body-color: var(--color-text);
 
 	--color-accent: #2A9D8F;
 	--color-accent-dark: #1F7A6E;
 
-	--color-primary: var(--color-dark);
+	--color-primary: var(--color-text);
 
-	--color-blue: #336bcd;
+	--color-blue: var(--color-accent);
 
 	--color-border: #DEDEDE;
 
@@ -24,16 +27,16 @@
 	--font-family-secondary: "Montserrat", sans-serif;
 
 	--container-width: #{rem(1697)};
-	--container-xs-width: #{rem(680)};
+	--container-xs-width: #{rem(900)};
 	--container-padding-x: #{rem(32)};
-	//@include mobile {
-	//	--container-width: #{rem(400)};
-	//}
+
+	@include mobile {
+		--container-padding-x: #{rem(16)};
+	}
 
 	--transition-duration: .2s;
 
 	//header
-
 
 	//buttons
 
@@ -41,6 +44,6 @@
 	--btn-primary-color: var(--color-dark);
 	--btn-primary-bg: var(--color-light);
 	--btn-primary-color-active: var(--color-light);
-	--btn-primary-bg-active: var(--color-dark);
+	--btn-primary-bg-active: var(--color-accent);
 
 }

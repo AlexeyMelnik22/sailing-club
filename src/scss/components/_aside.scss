@@ -76,7 +76,7 @@ $transition-time: 0.4s;
         display: inline-block;
 
         color: $menu-text;
-        font-size: clamp(22px, 2vw, 28px);
+        font-size: rem(22);
         font-weight: 400;
         line-height: 1.25;
         text-decoration: none;
@@ -102,7 +102,7 @@ $transition-time: 0.4s;
 
         &:hover,
         &:focus-visible {
-          color: var(--color-gray-1);
+          color: var(--color-accent);
           transform: translateX(5px);
 
           &::after {
@@ -117,10 +117,14 @@ $transition-time: 0.4s;
         &.side-menu__sub--link {
           margin-left: rem(5);
           color: var(--color-gray);
-          font-size: rem(22);
+          font-size: rem(18);
           &:before {
             content: "-";
             margin-right: rem(5);
+          }
+          &:hover,
+          &:focus-visible {
+            color: var(--color-accent);
           }
         }
       }
@@ -188,8 +192,8 @@ body.menu-is-open {
       gap: rem(14);
     }
 
-    a {
-      font-size: rem(23);
+    .side-menu__list .side-menu__item .side-menu__link {
+      font-size: rem(18);
     }
   }
 }
@@ -227,9 +231,18 @@ body.menu-is-open {
       .side-menu__item {
         .side-menu__link {
           color: $menu-text;
+          &:hover,
+          &:focus-visible {
+            color: var(--color-accent);
+          }
           &.side-menu__sub--link {
             color: $menu-text;
             opacity: 0.8;
+            &:hover,
+            &:focus-visible {
+              color: var(--color-accent);
+              opacity: 1;
+            }
           }
         }
       }
