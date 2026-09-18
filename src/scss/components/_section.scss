@@ -2,17 +2,30 @@
 
 .section {
   padding-bottom: rem(70);
+
+  @include mobile {
+    padding-bottom: rem(32);
+  }
   &__title {
-    font-size: em(38);
-    margin-bottom: rem(30);
+    margin-bottom: rem(24);
   }
   &__desc {
     font-size: em(18);
-    color: var(--color-gray-1);
+    color: var(--color-text-muted);
     margin-bottom: rem(30);
+    line-height: 1.65;
   }
   &__subdesk {
-    margin-bottom: rem(50);
-    font-weight: 300;
+    margin-bottom: rem(40);
+    font-weight: 400;
+    color: var(--color-text);
+    line-height: 1.65;
   }
+}
+
+.lede {
+  font-size: em(18);
+  color: var(--color-text-muted);
+  margin-bottom: rem(32);
+  line-height: 1.65;
 }

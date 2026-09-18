@@ -3,7 +3,7 @@
 table {
   width: 100%;
   th {
-    background-color: var(--color-gray-3);
+    background-color: var(--color-text);
     color: var(--color-light);
     font-weight: 700;
     text-align: left;
@@ -11,7 +11,8 @@ table {
   }
 
   td {
-    padding: rem(10) rem(12); /* Gives data space to breathe */
-    border-bottom: 1px solid #dddddd;
+    padding: rem(10) rem(12);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
   }
 }

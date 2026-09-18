@@ -1,8 +1,7 @@
 @use "helpers" as *;
 
-.hero:where(:not(:last-child)) {
+.hero:where(:not(:last-child)) {}
 
-}
 .hero {
   //min-height: calc(100vh - rem(190));
   //min-height: 100dvh;
@@ -10,18 +9,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  &__inner {
 
-  }
+  &__inner {}
+
   &__title {
     /* text-transform: uppercase; */
     margin-bottom: rem(24);
   }
+
   &__text {
     max-width: rem(700);
     @include fluid-text(18, 16);
     margin-bottom: rem(24);
   }
+
   &__list {
     max-width: rem(700);
     margin-bottom: rem(24);
@@ -30,11 +31,22 @@
     padding-left: rem(18);
     @include fluid-text(18, 16);
   }
+
   &__action {
     //margin-top: rem(30);
     display: inline-flex;
     flex-direction: column;
     gap: rem(20);
     align-items: flex-start;
+  }
+}
+
+.sub-body {
+  .hero__title {
+    margin-bottom: rem(48);
+
+    @include tablet {
+      margin-bottom: rem(24);
+    }
   }
 }

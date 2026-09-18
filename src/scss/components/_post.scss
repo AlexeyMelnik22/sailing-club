@@ -1,19 +1,28 @@
 @use "helpers" as *;
 
 .post {
-  padding-block: rem(70);
+  padding-bottom: 0;
   &__chapter {
     margin-bottom: fluid(50, 30);
     &--title {
-
+      margin-bottom: rem(16);
     }
     &--text {
-      margin-bottom: rem(30);
-      font-weight: 300;
+      margin-bottom: rem(24);
+      font-weight: 400;
+      color: var(--color-text);
+      line-height: 1.65;
     }
   }
   &__cta {
-    padding-top: rem(70);
-    border-top: 1px solid #e5e7eb;
+    padding-top: rem(56);
+    border-top: 1px solid var(--color-border);
+  }
+  &__action {
+    @include mobile {
+      .btn {
+        width: 100%;
+      }
+    }
   }
 }
