@@ -1,8 +1,17 @@
 @use "helpers" as *;
 
 .article {
-  padding-block: rem(35);
+  padding-block: rem(24);
   border-bottom: 1px solid var(--color-border);
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
   &__category {
     display: inline-block;
     font-size: 0.75rem;
@@ -37,6 +46,6 @@
     line-height: 1.65;
   }
   &__read {
-    margin-top: rem(20);
+    margin-top: rem(24);
   }
 }

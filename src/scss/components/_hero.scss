@@ -36,17 +36,13 @@
     //margin-top: rem(30);
     display: inline-flex;
     flex-direction: column;
-    gap: rem(20);
+    gap: rem(24);
     align-items: flex-start;
   }
 }
 
 .sub-body {
   .hero__title {
-    margin-bottom: rem(48);
-
-    @include tablet {
-      margin-bottom: rem(24);
-    }
+    margin-bottom: rem(32);
   }
 }

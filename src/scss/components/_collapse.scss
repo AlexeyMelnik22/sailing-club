@@ -2,11 +2,7 @@
 
 .faq {
   margin: 0 auto;
-  padding: 0 0 rem(70);
-
-  @include mobile {
-    padding-bottom: rem(32);
-  }
+  padding: 0;
   &__item {
     border-bottom: 1px solid var(--color-border);
     &.active  {
@@ -16,9 +12,19 @@
     }
   }
   &__group {
-    margin-block: rem(40);
+    margin-top: rem(24);
+    margin-bottom: 0;
     .group__title {
       margin-bottom: rem(12);
+    }
+  }
+  &__bottom {
+    padding-top: rem(24);
+
+    p {
+      margin: 0 0 rem(24);
+      color: var(--color-text-muted);
+      line-height: 1.65;
     }
   }
   &__toggle {
