@@ -5,16 +5,28 @@
     padding-block: rem(40);
     display: flex;
     align-items: center;
+    justify-content: center;
     row-gap: rem(30);
     column-gap: fluid(100, 30);
     flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: rem(16);
+    }
   }
   .copyright {
-    display: flex;
-    align-items: center;
-    gap: rem(10);
     white-space: nowrap;
-    flex-wrap: wrap;
+
+    @include tablet {
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      white-space: normal;
+      text-align: center;
+      font-size: inherit;
+    }
   }
   .socials {
     display: flex;

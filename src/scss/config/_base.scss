@@ -7,12 +7,12 @@ html {
 }
 
 body {
-	@include fluid-text(16, 14);
+	@include fluid-text(17, 16);
 	color: var(--color-light);
 	background-color: transparent;
 	font-family: var(--font-family-base);
 	overscroll-behavior: none;
-	line-height: 1.5;
+	line-height: 1.65;
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
 	font-weight: 400;
@@ -21,9 +21,10 @@ body {
 	//min-height: 100svh;
 	min-height: 100vh;
 	&.sub-body {
-		color: var(--sub-body-color);
+		color: var(--color-text);
+		background-color: var(--color-bg);
 		h1,.h1,h2,.h2,h3,.h3,h4,.h4 {
-			color: var(--sub-body-color);
+			color: var(--color-text);
 		}
 	}
 	&:not(.sub-body) {
@@ -37,17 +38,30 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	height: 100svh;
+	min-height: 100svh;
 	width: 100%;
 	min-block-size: 100%;
 	justify-content: space-between;
 }
 
+// Home: pin footer to the viewport. Text pages grow with content.
+body:not(.sub-body) .wrapper {
+	height: 100svh;
+}
 
-h1, .h1 { @include fluid-text(80, 24) }
-h2, .h2 { @include fluid-text(64, 32) }
-h3, .h3 { @include fluid-text(24, 18) }
+
+// Shared type scale for text pages. Home stays larger — see below.
+h1, .h1 { @include fluid-text(44, 30) }
+h2, .h2 { @include fluid-text(32, 24) }
+h3, .h3 { @include fluid-text(22, 18) }
 h6, .h6 { @include fluid-text(16, 14) }
+
+// Home cover: H1 smaller than the original 80px
+body:not(.sub-body) {
+	h1, .h1 {
+		@include fluid-text(56, 32);
+	}
+}
 //body { @include fluid-text(16, 14) }
 
 
@@ -63,10 +77,13 @@ h6, .h6 {
 	letter-spacing: -0.01em;
 }
 
-h3, .h3 {
-	margin-bottom: rem(24);
+h2, .h2 {
+	margin-bottom: rem(16);
 }
 
+h3, .h3 {
+	margin-bottom: rem(16);
+}
 
 .container {
     max-width: calc(var(--container-width) +  var(--container-padding-x) *2);
@@ -125,10 +142,20 @@ h3, .h3 {
 //sub body change colors
 .sub-body {
 	.link {
-		@include link-color(var(--color-dark));
+		@include link-color(var(--color-accent));
 		text-decoration: none;
 		border-bottom: rem(1) solid transparent;
 		transition: var(--transition-duration);
+	}
+
+	// Training / Racing / About: same reading column as Blog / FAQ
+	.container.hero__inner {
+		max-width: calc(var(--container-xs-width) + var(--container-padding-x) * 2);
+	}
+
+	.hero__text,
+	.hero__list {
+		max-width: none;
 	}
 }
 
@@ -143,6 +170,6 @@ button {
 }
 
 a {
-	color: var(--color-blue);
+	color: var(--color-accent);
 	text-decoration: none;
 }

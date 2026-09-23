@@ -7,14 +7,16 @@
 			position: relative;
 			overflow: hidden;
 			color: var(--color-light);
-			background-color: var(--sub-body-color);
+			background-color: var(--color-accent);
+
 			&:hover {
-				background-color: #3b2c85;
+				background-color: var(--color-accent-dark);
 				color: var(--color-light);
 			}
 		}
 	}
 }
+
 .btn {
 	position: relative;
 	min-width: rem(140);
@@ -31,19 +33,28 @@
 	justify-content: center;
 	line-height: normal;
 	white-space: nowrap;
+	max-width: 100%;
 	box-shadow: none;
 	transition: var(--transition-duration);
 	z-index: 1;
 	letter-spacing: rem(2);
+
+	@include mobile {
+		white-space: normal;
+		height: auto;
+		min-height: rem(45);
+		padding-block: rem(12);
+	}
+
 	&__primary {
 		position: relative;
 		overflow: hidden;
 		color: var(--btn-primary-color);
 		background-color: var(--btn-primary-bg);
+
 		&:hover {
 			background-color: var(--btn-primary-bg-active);
 			color: var(--btn-primary-color-active);
 		}
 	}
 }
-
